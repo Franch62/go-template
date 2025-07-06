@@ -1,0 +1,23 @@
+app_name: myservice
+http_port: 8080
+db_dsn: "user:pass@tcp(localhost:3306)/mydb?parseTime=true"
+log_level: info
+tenant_header: X-Tenant-ID
+keycloak:
+  url: "http://localhost:8081"
+  realm: "myrealm"
+  client_id: "myclient"
+  secret: "mysecret"
+minio:
+  endpoint: "localhost:9000"
+  access_key: "minioadmin"
+  secret_key: "minioadmin"
+  bucket: "evidences"
+  use_ssl: false
+rekor:
+  url: "http://localhost:3000"
+tracing:
+  otlp_endpoint: "http://localhost:4318"
+prometheus:
+  enabled: true
+  path: "/metrics" 
